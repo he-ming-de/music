@@ -1,0 +1,87 @@
+<!--pages/play/play.wxml-->
+
+
+<view wx:for="{{songs}}" wx:key="index" class="item">
+	<view class="container">
+		<image src="{{item.al.picUrl}}" class="containerimg"></image>
+	</view>
+	<view class="font">{{item.name}}</view>
+	<view class="fonts">{{item.ar[0].name}}</view>
+	<view class="item1">
+		<swiper class="item1-img">
+			<swiper-item>
+				<view class="box-img">
+					<image src="{{item.al.picUrl}}" class="img {{flaga===1?'active':''}}"></image>
+				</view>
+			</swiper-item>
+			<swiper-item>
+				<scroll-view class="lyric" scroll-y scroll-with-animation="true" scroll-top="{{maringTop}}">
+					<view wx:for="{{lyricArray}}" wx:key='index' wx:for-item="lyric">
+						<text class="{{currentindex===index?'currentlyric':''}}">{{lyric[1]}}</text>
+					</view>
+				</scroll-view>
+			</swiper-item>
+		</swiper>
+	</view>
+	<view class="dis-imgs">
+		<view class="dis-img">
+
+			<view wx:if="{{flag===0}}" bindtap="bindtx">
+				<image src="../../images/tabbar/tx.png" class="image"></image>
+			</view>
+			<view wx:else bindtap="bindhtx">
+				<image src="../../images/tabbar/htx.png" class="image"></image>
+			</view>
+			<view>
+				<image src="../../images/tabbar/xz.png" class="image"></image>
+			</view>
+			<view>
+				<image src="../../images/tabbar/mkf.png" class="image"></image>
+			</view>
+			<view>
+				<image src="../../images/tabbar/xx.png" class="image"></image>
+			</view>
+			<view>
+				<image src="../../images/tabbar/gd.png" class="image"></image>
+			</view>
+
+		</view>
+	</view>
+
+	<view class="sectionkk">
+		<view class="dt">{{value}}</view>
+		<view class="imagecc">
+			<slider bindchange="slider3change" block-size="12" value="{{values}}" max="{{durations}}"/>
+		</view>
+		<view class="dt">{{duration}}</view>
+	</view>
+
+	<view class="play_img">
+		<view class="play_imgs">
+			<view wx:if="{{flags===0}}" bindtap="bindloop">
+				<image src="../../images/tabbar/loop.png" class="image"></image>
+			</view>
+			<view wx:if="{{flags===1}}" bindtap="bindrandom">
+				<image src="../../images/tabbar/random.png" class="image"></image>
+			</view>
+			<view wx:if="{{flags===2}}" bindtap="bindsinglecycle">
+				<image src="../../images/tabbar/singlecycle.png" class="image"></image>
+			</view>
+			<view>
+				<image src="../../images/tabbar/lastsong.png" class="image" bindtap="lastsong"></image>
+			</view>
+			<view wx:if="{{flaga===1}}" bindtap="bindplay">
+				<image src="../../images/tabbar/play.png" class="play-image" bindtap="unplay"></image>
+			</view>
+			<view wx:if="{{flaga===0}}" bindtap="bindsuspend">
+				<image src="../../images/tabbar/suspend.png" class="play-image" bindtap="suspend"></image>
+			</view>
+			<view>
+				<image src="../../images/tabbar/nextsong.png" class="image" bindtap="nextsong"></image>
+			</view>
+			<view>
+				<image src="../../images/tabbar/playlist.png" class="image"></image>
+			</view>
+		</view>
+	</view>
+</view>

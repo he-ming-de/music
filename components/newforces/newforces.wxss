@@ -1,0 +1,44 @@
+/* components/newforces/newforces.wxss */
+.item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.imgs {
+  width: 200rpx;
+  height: 180rpx;
+}
+
+.img {
+  width: 200rpx;
+  height: 180rpx;
+  border-radius: 20rpx;
+}
+
+.font {
+  width: 200rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 20rpx 0;
+}
+.item3 {
+  margin-top: 20rpx;
+}
+.item1 {
+  padding: 0 40rpx;
+}
+.fonts {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+}
+.fontss{
+background: #ccc;
+padding: 6rpx 12rpx;
+border-radius: 20rpx;
+font-size: 32rpx;
+}
+.bos {
+  font-weight: 700;
+}

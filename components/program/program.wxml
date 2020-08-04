@@ -1,0 +1,15 @@
+<!--components/program/program.wxml-->
+<view class="item1">
+	<view class="fonts">
+		<view class="bos">推荐节目</view>
+		<view class="fontss">更多节目</view>
+	</view>
+	<view class="item">
+		<view wx:for="{{programs}}" wx:key="index" class="item3" bindtap="bindplay" data-item="{{item}}">
+			<view class="imgs">
+				<image src="{{item.coverUrl}}" class="img"></image>
+			</view>
+			<view class="font">{{item.name}}</view>
+		</view>
+	</view>
+</view>

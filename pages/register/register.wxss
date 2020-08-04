@@ -1,0 +1,16 @@
+/* pages/register/register.wxss */
+.but {
+  display: flex;
+  justify-content: center;
+  margin-top: 40rpx;
+}
+.buts {
+  margin-right: 40rpx;
+}
+.item4 {
+  margin-top: 40rpx;
+}
+.butt {
+  display: flex;
+  align-items: center;
+}

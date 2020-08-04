@@ -1,0 +1,15 @@
+<!--components/songsheet/songsheet.wxml-->
+<view class="item1">
+	<view class="fonts">
+		<view class="fon">推荐歌单</view>
+		<view class="fons" bindtap="bindge">歌单广场</view>
+	</view>
+	<view class="item">
+		<view wx:for="{{result}}" wx:key="index" class="imgss" bindtap="bindsheet" data-item="{{item}}">
+			<view class="imgs">
+				<image src="{{item.picUrl}}" class="img"></image>
+			</view>
+			<view class="font">{{item.name}}</view>
+		</view>
+	</view>
+</view>

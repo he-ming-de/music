@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "rotation":"../../components/rotation/rotation",
+    "search":"../../components/search/search",
+    "recommend":"../../components/recommend/recommend",
+    "songsheet":"../../components/songsheet/songsheet",
+    "newdisc":"../../components/newdisc/newdisc",
+    "newforces":"../../components/newforces/newforces",
+    "radiostation":"../../components/radiostation/radiostation",
+    "program":"../../components/program/program"
+  }
+}

@@ -1,0 +1,30 @@
+<!--components/newdisc/newdisc.wxml-->
+<view>
+	<view class="item1">
+		<view class="fonts">
+			<view class="fontss">
+				<view class="{{flag===0?'active':''}}" bindtap="binddish">新碟</view>
+				<view class="fontsa">|</view>
+				<view class="{{flag===1?'active':''}}" bindtap="bindsong">新歌</view>
+			</view>
+			<view class="item2"  wx:if="{{flag===0}}">更多新碟</view>
+			<view class="item2"  wx:if="{{flag===1}}">更多新歌</view>
+		</view>
+		<view class="item" wx:if="{{flag===0}}">
+			<view wx:for="{{albums}}" wx:key="index" class="item3">
+				<view class="imgs">
+					<image src="{{item.picUrl}}" class="img"></image>
+				</view>
+				<view class="font">{{item.name}}</view>
+			</view>
+		</view>
+		<view class="item" wx:if="{{flag===1}}">
+			<view wx:for="{{data}}" wx:key="index" class="item3" bindtap="bindplay" data-item="{{item}}">
+				<view class="imgs">
+					<image src="{{item.album.picUrl}}" class="img"></image>
+				</view>
+				<view class="font">{{item.name}}</view>
+			</view>
+		</view>
+	</view>
+</view>

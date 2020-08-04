@@ -1,0 +1,52 @@
+/* components/newdisc/newdisc.wxss */
+.item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.item1 {
+  padding: 0 40rpx;
+}
+
+.imgs {
+  width: 200rpx;
+  height: 180rpx;
+}
+
+.img {
+  width: 200rpx;
+  height: 180rpx;
+  border-radius: 20rpx;
+}
+
+.font {
+  width: 200rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 20rpx 0;
+}
+.fonts {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+}
+.fontss {
+  display: flex;
+}
+.fontsa {
+  padding: 0 20rpx;
+}
+.item2 {
+  padding: 6rpx 12rpx;
+  background: #ccc;
+  border-radius: 20rpx;
+}
+.item3 {
+  margin-top: 20rpx;
+}
+.active {
+  font-size: 36rpx;
+  font-weight: 700;
+}

@@ -1,0 +1,68 @@
+<!--pages/square/square.wxml-->
+<van-tabs active="{{ active }}">
+	<van-tab title="推荐">
+		<view class="item9">
+			<!-- <swiper circular="{{true}}">
+				<swiper-item wx:for="{{playlists}}" wx:key="index">
+					<view class="fonts">
+						<view class="imgs">
+							<image src="{{item.coverImgUrl}}" class="img"></image>
+						</view>
+						<view class="font">{{item.name}}</view>
+					</view>
+				</swiper-item>
+			</swiper> -->
+
+
+			<view class='top'>
+				<swiper class='swiperClass' style='height:460rpx;width:100%' circular="{{true}}" previous-margin="180rpx" next-margin="180rpx" bindchange="bindchange">
+					<swiper-item wx:for="{{playlists}}" wx:key="index" bindtap="bindsheet" data-item="{{item}}">
+						<view>
+							<image src="{{item.coverImgUrl}}" class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFill' />
+							<view class="font">{{item.name}}</view>
+						</view>
+					</swiper-item>
+				</swiper>
+			</view>
+
+
+
+
+
+
+			<view class="item1">
+				<view wx:for="{{playlistsl}}" wx:key="index" class="imageh" bindtap="bindsheet" data-item="{{item}}">
+					<view class="images">
+						<image src="{{item.coverImgUrl}}" class="image"></image>
+					</view>
+					<view class="subfont">{{item.name}}</view>
+				</view>
+			</view>
+		</view>
+	</van-tab>
+	<van-tab title="官方">内容 2</van-tab>
+	<van-tab title="精品">
+		<view class="item9">
+			<view class="item1">
+				<view wx:for="{{playlistss}}" wx:key="index" class="imageh" bindtap="bindsheet" data-item="{{item}}">
+					<view class="images">
+						<image src="{{item.coverImgUrl}}" class="image"></image>
+					</view>
+					<view class="subfont">{{item.name}}</view>
+				</view>
+			</view>
+		</view>
+	</van-tab>
+	<van-tab title="华语">
+		<view class="item9">
+			<view class="item1">
+				<view wx:for="{{playlistshu}}" wx:key="index" class="imageh" bindtap="bindsheet" data-item="{{item}}">
+					<view class="images">
+						<image src="{{item.coverImgUrl}}" class="image"></image>
+					</view>
+					<view class="subfont">{{item.name}}</view>
+				</view>
+			</view>
+		</view>
+	</van-tab>
+</van-tabs>

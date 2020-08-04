@@ -1,0 +1,30 @@
+<!--pages/edit/edit.wxml-->
+<van-cell title="昵称" is-link value="{{nickname}}" bind:click='nickname' />
+<van-dialog use-slot title="昵称" show="{{ show }}" show-cancel-button confirm-button-open-type="getUserInfo" bind:close="onClose" bind:getuserinfo="getUserInfo">
+	<van-cell-group>
+		<van-field value="{{ nickname }}" border="{{ false }}" bind:change="onChange" />
+	</van-cell-group>
+</van-dialog>
+
+
+<van-cell title="性别" is-link value="{{gender}}" bind:click='gender' />
+<van-popup show="{{ show1 }}" position="bottom" custom-style="height: 60%;" bind:close="onClose">
+	<van-picker columns="{{columns}}" title="性别" show-toolbar bind:confirm='confirm' bind:cancel='cance' />
+</van-popup>
+
+
+<van-cell title="生日" is-link value="{{birthday}}" bind:click='birthday' />
+<van-popup show="{{ show2 }}" position="bottom" custom-style="height: 60%;" bind:close="onClose">
+	<van-datetime-picker title="生日" type="date" value="{{ currentDate }}" bind:cancel="cancels" bind:confirm="confirms" min-date="{{ minDate }}" formatter="{{ formatter }}" />
+</van-popup>
+
+
+<van-cell title="城市" is-link value="{{simcity}}" bind:click='simcity' />
+<van-popup show="{{ show3 }}" position="bottom" custom-style="height: 60%;" bind:close="onClose">
+	<van-area area-list="{{ area }}" columns-num="{{ 2 }}" title="城市" bind:confirm="confirmcity" bind:cancel="cancelcity" />
+</van-popup>
+
+
+<van-cell title="签名" is-link value="{{signature}}" />
+
+<view class="simbut"><view class="boutoom" bindtap="bouttom">修改</view></view>

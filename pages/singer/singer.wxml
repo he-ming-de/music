@@ -1,0 +1,42 @@
+<!--pages/singer/singer.wxml-->
+<view class="item1">
+	<scroll-view scroll-x>
+		<view class="hear">
+			<view wx:for="{{singerlist}}" wx:key="index" data-item="{{item}}" data-index="{{index}}" bindtap="binsinger">
+				<view class="font {{active===index ? 'change':''}}">{{item.name}}</view>
+			</view>
+		</view>
+	</scroll-view>
+	<view wx:if="{{active===0}}"></view>
+	<view wx:else>
+		<view class="item">
+			<scroll-view scroll-x>
+				<view class="hear">
+					<view wx:for="{{zimu}}" wx:key="index" data-item="{{item}}" data-index="{{index}}" bindtap="bindzimu">
+						<view class="fonts {{actives===index ? 'active':''}}">{{item.name}}</view>
+					</view>
+				</view>
+			</scroll-view>
+		</view>
+		<view wx:for="{{artistsh}}" wx:key="index" class="images"  bindtap="bindad" data-item="{{item}}">
+			<view class="imag">
+				<image src="{{item.picUrl}}" class="image"></image>
+			</view>
+			<view>{{item.name}}</view>
+		</view>
+		<view wx:for="{{artistshs}}" wx:key="index" class="images"  bindtap="bindad" data-item="{{item}}">
+			<view class="imag">
+				<image src="{{item.picUrl}}" class="image"></image>
+			</view>
+			<view>{{item.name}}</view>
+		</view>
+	</view>
+	<view>
+		<view wx:for="{{artistsm}}" wx:key="index" class="images" bindtap="bindad" data-item="{{item}}">
+			<view class="imag">
+				<image src="{{item.picUrl}}" class="image"></image>
+			</view>
+			<view>{{item.name}}</view>
+		</view>
+	</view>
+</view>

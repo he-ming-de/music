@@ -1,0 +1,68 @@
+/* pages/ranking/ranking.wxss */
+.img {
+  width: 200rpx;
+  height: 210rpx;
+}
+
+.item {
+  width: 200rpx;
+  height: 210rpx;
+  position: relative;
+}
+
+.font {
+  position: absolute;
+  left: 10rpx;
+  bottom: 10rpx;
+  color: #fff;
+  font-size: 24rpx;
+}
+
+.imgs {
+  display: flex;
+  margin-top: 20rpx;
+}
+.imgst {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 224rpx;
+  height: 300rpx;
+}
+.fontss {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+  justify-content: space-around;
+}
+
+.item3 {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.items {
+  padding: 0 40rpx;
+}
+.fonst{
+  font-size: 38rpx;
+  font-weight: 500;
+  margin-top: 20rpx;
+}
+.item4 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 672rpx;
+}
+.fon {
+  width: 200rpx;
+  margin-top: 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}

@@ -1,0 +1,27 @@
+<!--pages/my/my.wxml-->
+<view class="item1">
+	<view class="item">
+		<view class="font {{flag===0?'active':''}}" bindtap="bindmobilephone">手机号登录</view>
+		<view class="{{flag===1?'active':''}}" bindtap="bindmailbox">邮箱登录</view>
+	</view>
+</view>
+<view wx:if="{{flag===0}}" class="item4">
+	<van-cell-group>
+		<van-field maxlength="11" left-icon="phone-o" value="{{ phone }}" required label="手机号" bind:input="bindinput" placeholder="请输入手机号" border="{{ false }}" />
+		<van-field type="password" left-icon="photo-o" value="{{ password }}" required label="密码" bind:input="bindinputs" placeholder="请输入密码" border="{{ false }}" />
+	</van-cell-group>
+	<view class="but">
+		<view class="buts"><button size="mini" type="primary" bindtap="bindlogin">立即登录</button></view>
+		<view><button size="mini" type="warn" bindtap="getregister">立即注册</button></view>
+	</view>
+</view>
+<view wx:if="{{flag===1}}" class="item4">
+	<van-cell-group>
+		<van-field left-icon="free-postage"  value="{{ email }}" required label="邮箱" bind:input="bindemail" placeholder="请输入网易邮箱" border="{{ false }}" />
+		<van-field type="password" left-icon="photo-o" value="{{ pass }}" required label="密码" bind:input="bindpass" placeholder="请输入密码" border="{{ false }}" />
+	</van-cell-group>
+	<view class="but">
+		<view class="buts"><button size="mini" type="primary" bindtap="bindls">立即登录</button></view>
+		<view><button size="mini" type="warn" bindtap="getregister">立即注册</button></view>
+	</view>
+</view>

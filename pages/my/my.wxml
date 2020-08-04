@@ -1,0 +1,51 @@
+<!--pages/my/my.wxml-->
+<view style="background-image:url({{obj.backgroundUrl}})" class="top"></view>
+
+
+<view wx:if="{{uid !==''}}">
+	<view class="item4">
+		<view class="item1">
+			<view class="imgs">
+				<image src="{{obj.avatarUrl}}" class="img"></image>
+			</view>
+			<view class="fonts">
+				<view class="fontc">{{obj.nickname}}</view>
+				<view class="font">lv.{{Object.level}}</view>
+			</view>
+		</view>
+		<view class="item3">签到</view>
+	</view>
+	<view class="item5">
+		<view class="images">
+			<view>{{obj.eventCount}}</view>
+			<view class="fontss">动态</view>
+		</view>
+		<view class="images">
+			<view>{{obj.follows}}</view>
+			<view class="fontss">关注</view>
+		</view>
+		<view class="images">
+			<view>{{obj.followeds}}</view>
+			<view class="fontss">粉丝</view>
+		</view>
+		<view class="images" bindtap="edit" data-item="{{item}}">
+			<view>
+				<image src="../../images/tabbar/pens.png" class="image"></image>
+			</view>
+			<view class="fontss">编辑资料</view>
+		</view>
+	</view>
+	<view class="simbut">
+		<view class="boutoom" bindtap="bouttom">退出登录</view>
+	</view>
+
+</view>
+
+<view wx:else>
+	<view class="item">
+		<view class="baise">你还没有登录</view>
+		<view class="buts" bindtap="getregister">
+			<button size="mini" type="primary">点击登录</button>
+		</view>
+	</view>
+</view>

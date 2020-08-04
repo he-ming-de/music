@@ -1,0 +1,47 @@
+/* components/songsheet/songsheet.wxss */
+.item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.item1 {
+  padding: 0 40rpx;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+}
+
+.imgs {
+  width: 200rpx;
+  height: 180rpx;
+}
+.imgss {
+  width: 200rpx;
+  height: 260rpx;
+  margin-top: 20rpx;
+}
+
+.font {
+  width: 200rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 20rpx 0;
+}
+.fonts {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 0;
+}
+.fon {
+  font-size: 36rpx;
+  font-weight: 700;
+}
+.fons {
+  background: #ccc;
+  padding: 6rpx 12rpx;
+  border-radius: 20rpx;
+}

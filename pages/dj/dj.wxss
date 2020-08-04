@@ -1,0 +1,82 @@
+/* pages/dj/dj.wxss */
+.lunbo {
+  width: 100%;
+  height: 260rpx;
+  border-radius: 20rpx;
+}
+
+.lunbos {
+  width: 100%;
+  height: 260rpx;
+  position: relative;
+}
+.lunbod{
+  display: flex;
+  justify-content: center;
+}
+.font {
+  background: #ff4d00;
+  color: #fff;
+  padding: 6rpx 12rpx;
+  border-top-left-radius: 10rpx;
+  border-bottom-right-radius: 20rpx;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.item {
+  margin-top: 40rpx;
+  padding: 0 40rpx;
+}
+.images {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background: #ff4d00;
+  padding: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image {
+  width: 60rpx;
+  height: 60rpx;
+}
+.iis {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40rpx;
+}
+.fongs{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.xxx {
+  height: 1rpx;
+  background: #ccc;
+}
+.imi {
+  width: 60rpx;
+  height: 60rpx;
+  padding-left: 60rpx;
+  margin-right: 10rpx;
+}
+.im {
+  width: 60rpx;
+  height: 60rpx;
+}
+.ims {
+  display: flex;
+  align-items: center;
+  padding: 10rpx 0;
+  width: 334rpx;
+}
+.item1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.box {
+  font-size: 38rpx;
+  font-weight: 500;
+  padding: 40rpx 0;
+}

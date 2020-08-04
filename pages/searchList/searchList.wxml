@@ -1,0 +1,238 @@
+<!--pages/searchList/searchList.wxml-->
+<view class="item">
+	<view class="sub">
+		<image src="../../images/tabbar/search.png" class="im"></image>
+		<input class="inputh" type="text" value="{{keyword}}"></input>
+	</view>
+	<view class="box">
+		<van-tabs active="{{ active }}" bind:change='bindchange'>
+			<van-tab title="综合">
+				<view class="item2">
+					<view class="item3">单曲</view>
+					<view class="item4">播放全部</view>
+				</view>
+				<view wx:for="{{songs}}" wx:key="index" class="item1" bindtap="bindplay" data-item="{{item}}">
+					<view class="fony">{{item.name}}</view>
+					<view class="font">
+						<view>{{item.ar[0].name}}</view>
+						<view class="item9">-</view>
+						<view>{{item.al.name}}</view>
+					</view>
+				</view>
+				<view class="fonts" bindtap="bindclick">{{moreText}} ></view>
+				<view class="item3">歌单</view>
+				<view wx:for="{{playLists}}" wx:key="index" class="item7" bindtap="bindplay" data-item="{{item}}">
+					<view class="item6">
+						<view class="imgs">
+							<image src="{{item.coverImgUrl}}" class="img"></image>
+						</view>
+						<view>
+							<view class="subfont">{{item.name}}</view>
+							<view class="afont">{{item.trackCount}}首 by {{item.creator.nickname}}, 播放{{item.playCount}}万次</view>
+							<view></view>
+						</view>
+					</view>
+				</view>
+				<view class="fonts" bindtap="bindclicks">{{moreTexts}} ></view>
+				<view class="item3">视频</view>
+				<view wx:for="{{videos}}" wx:key="index" class="item7">
+					<view class="item6">
+						<view class="imgsc">
+							<image src="{{item.coverUrl}}" class="imgc"></image>
+						</view>
+						<view>
+							<view class="subfonts">{{item.title}}</view>
+							<view class="afont">{{item.playTime}} by {{item.creator[0].userName}}</view>
+							<view></view>
+						</view>
+					</view>
+				</view>
+				<view class="fonts" bindtap="bindclicka">{{moreTexta}} ></view>
+				<view class="item3">Mlog</view>
+				<view class="item8">
+					<view wx:for='{{mlogs}}' wx:key="index" class="fontc">
+						<view class="images">
+							<image src="{{item.resource.mlogBaseData.coverUrl}}" class="image"></image>
+							<view class="fontss">{{item.matchFieldContent}}</view>
+						</view>
+						<view class="iim">{{item.resource.mlogBaseData.text}}</view>
+						<view class="likedCount">
+							<view class="nickname">
+								<view class="avatarUrl">
+									<image src="{{item.resource.userProfile.avatarUrl}}" class="avatarUrl"></image>
+								</view>
+								<view class="iisc">{{item.resource.userProfile.nickname}}</view>
+							</view>
+							<view>{{item.resource.mlogExtVO.likedCount}}赞</view>
+						</view>
+					</view>
+				</view>
+				<view class="fonts" bindtap="bindclickb">{{moreTextb}} ></view>
+				<view class="item3">主题</view>
+				<view wx:for="{{talks}}" wx:key="index" class="item7" bindtap="bindplay" data-item="{{item}}">
+					<view class="item6">
+						<view class="imgs">
+							<image src="{{item.showCover.url}}" class="img"></image>
+						</view>
+						<view>
+							<view class="subfont"># {{item.talkName}}</view>
+							<view class="afont">{{item.follows}}人关注 {{item.mlogCount}}人参与</view>
+						</view>
+					</view>
+				</view>
+				<view class="fonts" bindtap="bindclickb">{{moreTextc}} ></view>
+				<view class="item3">歌手</view>
+				<view wx:for="{{artists}}" wx:key="index" class="item7" bindtap="bindplay" data-item="{{item}}">
+					<view class="item6s">
+						<view class="imgsx">
+							<image src="{{item.picUrl}}" class="imgx"></image>
+						</view>
+						<view class="subfont">{{item.name}}</view>
+					</view>
+				</view>
+				<view class="fonts" bindtap="bindclickd">{{moreTextd}} ></view>
+				<view class="item3">专辑</view>
+				<view wx:for="{{albums}}" wx:key="index" class="item7" bindtap="bindplay" data-item="{{item}}">
+					<view class="item6">
+						<view class="imgsv">
+							<image src="{{item.picUrl}}" class="imgv"></image>
+						</view>
+						<view>
+							<view class="subfont">{{item.name}}</view>
+							<view class="afont">{{item.artist.name}}</view>
+						</view>
+					</view>
+				</view>
+				<view class="fonts" bindtap="bindclickf">{{moreTextf}} ></view>
+				<view class="item3">用户</view>
+				<view wx:for="{{users}}" wx:key="index" class="item7" bindtap="bindplay" data-item="{{item}}">
+					<view class="item6s">
+						<view class="imgsx">
+							<image src="{{item.avatarUrl}}" class="imgx"></image>
+						</view>
+						<view>
+							<view class="subfont">{{item.nickname}}</view>
+							<view class="afont">{{item.signature}}</view>
+						</view>
+					</view>
+				</view>
+				<view class="fonts" bindtap="bindclicke">{{moreTexte}} ></view>
+			</van-tab>
+			<van-tab title="单曲">
+
+				<view class="item2">
+					<view class="item3">播放全部</view>
+					<view class="item5">多选</view>
+				</view>
+				<view wx:for="{{songs}}" wx:key="index" class="item1" bindtap="bindplay" data-item="{{item}}">
+					<view>
+						<view class="fonh">{{item.name}}</view>
+						<view class="font">
+							<view class="fonl">
+								<view wx:for="{{item.artists}}" wx:key="index">
+									<view>{{item.name}}</view>
+								</view>
+							</view>
+							<view>{{item.album.name}}</view>
+						</view>
+					</view>
+				</view>
+
+			</van-tab>
+			<van-tab title="云村">
+			</van-tab>
+			<van-tab title="视频">
+
+
+				<view wx:for="{{videos}}" wx:key="index" class="item7">
+					<view class="item6">
+						<view class="imgsc">
+							<image src="{{item.coverUrl}}" class="imgc"></image>
+						</view>
+						<view>
+							<view class="subfonts">{{item.title}}</view>
+							<view class="afont">{{item.playTime}} by {{item.creator[0].userName}}</view>
+							<view></view>
+						</view>
+					</view>
+				</view>
+
+			</van-tab>
+			<van-tab title="歌手">
+
+				<view wx:for="{{artists}}" wx:key="index" class="item7" bindtap="bindplay" data-item="{{item}}">
+					<view class="item6s">
+						<view class="imgsx">
+							<image src="{{item.picUrl}}" class="imgx"></image>
+						</view>
+						<view class="subfont">{{item.name}}</view>
+					</view>
+				</view>
+
+			</van-tab>
+			<van-tab title="专辑">
+
+				<view wx:for="{{albums}}" wx:key="index" class="item7" bindtap="bindplay" data-item="{{item}}">
+					<view class="item6">
+						<view class="imgsv">
+							<image src="{{item.picUrl}}" class="imgv"></image>
+						</view>
+						<view>
+							<view class="subfont">{{item.name}}</view>
+							<view class="afont">{{item.artist.name}} {{item.containedSong}}</view>
+						</view>
+					</view>
+				</view>
+
+			</van-tab>
+			<van-tab title="歌单">
+
+				<view wx:for="{{playlists}}" wx:key="index" class="item7" bindtap="bindplay" data-item="{{item}}">
+					<view class="item6">
+						<view class="imgs">
+							<image src="{{item.coverImgUrl}}" class="img"></image>
+						</view>
+						<view>
+							<view class="subfont">{{item.name}}</view>
+							<view class="afont">{{item.trackCount}}首 by {{item.creator.nickname}}, 播放{{item.playCount/10000}}万次</view>
+							<view></view>
+						</view>
+					</view>
+				</view>
+
+			</van-tab>
+			<van-tab title="主播电台">
+
+				<view class="item3">电台</view>
+				<view wx:for="{{djRadios}}" wx:key="index" class="item7" bindtap="bindplay" data-item="{{item}}">
+					<view class="item6">
+						<view class="imgs">
+							<image src="{{item.picUrl}}" class="img"></image>
+						</view>
+						<view>
+							<view class="subfont">{{item.name}}</view>
+							<view class="afont">{{item.dj.nickname}}</view>
+							<view></view>
+						</view>
+					</view>
+				</view>
+
+			</van-tab>
+			<van-tab title="用户">
+
+				<view wx:for="{{userprofiles}}" wx:key="index" class="item7" bindtap="bindplay" data-item="{{item}}">
+					<view class="item6s">
+						<view class="imgsx">
+							<image src="{{item.avatarUrl}}" class="imgx"></image>
+						</view>
+						<view>
+							<view class="subfont">{{item.nickname}}</view>
+							<view class="afont">{{item.signature}}</view>
+						</view>
+					</view>
+				</view>
+
+			</van-tab>
+		</van-tabs>
+	</view>
+</view>

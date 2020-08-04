@@ -1,0 +1,26 @@
+/* pages/my/my.wxss */
+.item {
+  display: flex;
+  justify-content: center;
+}
+.item1 {
+  padding: 40rpx;
+  text-align: center;
+}
+.font {
+  margin-right: 60rpx;
+}
+.active {
+  border-bottom: 4rpx solid red;
+}
+.but {
+  display: flex;
+  justify-content: center;
+  margin-top: 40rpx;
+}
+.buts {
+  margin-right: 40rpx;
+}
+.item4 {
+  margin-top: 40rpx;
+}

@@ -1,0 +1,80 @@
+<!--pages/ranking/ranking.wxml-->
+<view class="items">
+	<view class="fonst">榜单推荐</view>
+	<view class="item4">
+		<view wx:for="{{lista}}" wx:key="index" class="imgst">
+			<view class="item">
+				<image src="{{item.coverImgUrl}}" class="img"></image>
+				<view class="font">{{item.updateFrequency}}</view>
+			</view>
+			<view class="fon">{{item.name}}</view>
+		</view>
+	</view>
+	<view class="fonst">官方榜</view>
+	<view wx:for="{{list}}" wx:key="index" class="imgs">
+		<view class="item">
+			<image src="{{item.coverImgUrl}}" class="img"></image>
+			<view class="font">{{item.updateFrequency}}</view>
+		</view>
+
+		<view class="fontss">
+			<view wx:for="{{item.tracks}}" wx:key="index" class="item3">
+				<view>{{index+1}}</view>
+				<view>.</view>
+				<view>{{item.first}}</view>
+				<view>-</view>
+				<view>{{item.second}}</view>
+			</view>
+		</view>
+	</view>
+	<view class="fonst">特色榜</view>
+	<view class="item4">
+		<view wx:for="{{listb}}" wx:key="index" class="imgst">
+			<view class="item">
+				<image src="{{item.coverImgUrl}}" class="img"></image>
+				<view class="font">{{item.updateFrequency}}</view>
+			</view>
+			<view class="fon">{{item.name}}</view>
+		</view>
+	</view>
+	<view class="fonst">全球榜</view>
+	<view class="item4">
+		<view wx:for="{{listc}}" wx:key="index" class="imgst">
+			<view class="item">
+				<image src="{{item.coverImgUrl}}" class="img"></image>
+				<view class="font">{{item.updateFrequency}}</view>
+			</view>
+			<view class="fon">{{item.name}}</view>
+		</view>
+	</view>
+	<view class="fonst">地区榜</view>
+	<view class="item4">
+		<view wx:for="{{listd}}" wx:key="index" class="imgst">
+			<view class="item">
+				<image src="{{item.coverImgUrl}}" class="img"></image>
+				<view class="font">{{item.updateFrequency}}</view>
+			</view>
+			<view class="fon">{{item.name}}</view>
+		</view>
+	</view>
+	<view class="fonst">曲风榜</view>
+	<view class="item4">
+		<view wx:for="{{liste}}" wx:key="index" class="imgst">
+			<view class="item">
+				<image src="{{item.coverImgUrl}}" class="img"></image>
+				<view class="font">{{item.updateFrequency}}</view>
+			</view>
+			<view class="fon">{{item.name}}</view>
+		</view>
+	</view>
+	<view class="fonst">更多榜单</view>
+	<view class="item4">
+		<view wx:for="{{listf}}" wx:key="index" class="imgst">
+			<view class="item">
+				<image src="{{item.coverImgUrl}}" class="img"></image>
+				<view class="font">{{item.updateFrequency}}</view>
+			</view>
+			<view class="fon">{{item.name}}</view>
+		</view>
+	</view>
+</view>

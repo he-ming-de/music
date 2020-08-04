@@ -1,0 +1,86 @@
+<!--index.wxml-->
+
+<view wx:if="{{flag===0}}">
+	<view class="font">
+		<view class="fontcs">音乐馆</view>
+		<view class="inputs" bindtap="bindclick">
+			<image src="../../images/tabbar/search.png" class="imgs"></image>
+			<input class="input" type="text" placeholder="搜索"></input>
+		</view>
+		<view class="imgccc">
+			<image src="../../images/tabbar/musics.png" class="img"></image>
+		</view>
+	</view>
+
+	<rotation banners="{{banners}}"></rotation>
+	<recommend></recommend>
+	<songsheet result="{{result}}"></songsheet>
+	<newdisc albums="{{albums}}" data="{{data}}"></newdisc>
+	<newforces results="{{results}}"></newforces>
+	<radiostation getresult="{{getresult}}"></radiostation>
+	<program programs="{{programs}}"></program>
+</view>
+<view wx:if="{{flag===1}}">
+	<view class="fonts">
+		<view class="sub">
+			<image src="../../images/tabbar/search.png" class="im"></image>
+			<input class="inputh" type="text" placeholder="请输入搜索关键字" value="{{value}}" bindinput="bindinput" bindconfirm="bindconfirm"></input>
+		</view>
+		<view wx:if="{{value===''}}"></view>
+		<view wx:else>
+			<image src="../../images/tabbar/dels.png" class="dels" bindtap="bingdels"></image>
+		</view>
+		<view bindtap="bindclicks">取消</view>
+	</view>
+	<view wx:if="{{value===''}}"></view>
+	<view class="fiex" wx:else>
+		<view class="pi">搜索 “{{value}}”</view>
+		<view wx:for="{{allMatch}}" wx:key="index" class="fonth" bindtap="bindJump" data-type="{{type}}" data-item="{{item}}">
+			<view class="iiid">
+				<image src="../../images/tabbar/search.png" class="imx"></image>
+			</view>
+			<view class="sfont">{{item.keyword}}</view>
+		</view>
+	</view>
+	<view wx:if="{{history.length===0}}"></view>
+	<view class="ssimg" wx:else>
+		<view class="simg">
+			<view>搜索历史</view>
+			<view class="simgs" bindtap="del">
+				<image src="../../images/tabbar/delss.png" class="simgs"></image>
+			</view>
+		</view>
+		<view class="history">
+			<view wx:for="{{history}}" wx:key="index" bindtap="binddatasc" data-item="{{item}}">
+				<view class="historys">{{item.value}}</view>
+			</view>
+		</view>
+	</view>
+	<view class="ismg">
+		<view>热搜榜</view>
+		<view>
+			<view wx:for="{{datas}}" wx:key="index" class="iiss" bindtap="binddatas" data-item="{{item}}">
+				<view wx:if="{{index<3}}">
+					<view class="iiis">{{index+1}}</view>
+				</view>
+				<view wx:else>
+					<view class="iiisa">{{index+1}}</view>
+				</view>
+				<view>
+					<view class="ifont">
+						<view wx:if="{{index<3}}">
+							<view class="fontz">{{item.searchWord}}</view>
+						</view>
+						<view wx:else>
+							<view class="fontzs">{{item.searchWord}}</view>
+						</view>
+						<view class="iimgs">
+							<image src="{{item.iconUrl}}" class="iimg"></image>
+						</view>
+					</view>
+					<view class="fontx">{{item.content}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

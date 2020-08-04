@@ -1,0 +1,33 @@
+<!--components/recommend/recommend.wxml-->
+<view class="item">
+	<view class="font">
+		<view class="fonts">每日推荐</view>
+		<view class="img">
+			<image src="../../images/tabbar/jishiben.png" class="img"></image>
+		</view>
+	</view>
+	<view class="font" bindtap="bindsong">
+		<view class="fonts">歌单</view>
+		<view class="img">
+			<image src="../../images/tabbar/yinfu.png" class="img"></image>
+		</view>
+	</view>
+	<view class="font" bindtap="bindrank">
+		<view class="fonts">排行榜</view>
+		<view class="img">
+			<image src="../../images/tabbar/paihang.png" class="img"></image>
+		</view>
+	</view>
+	<view class="font" bindtap="binddj">
+		<view class="fonts">电台</view>
+		<view class="img">
+			<image src="../../images/tabbar/diantai.png" class="img"></image>
+		</view>
+	</view>
+	<view class="font">
+		<view class="fonts">直播</view>
+		<view class="img">
+			<image src="../../images/tabbar/zhibo.png" class="img"></image>
+		</view>
+	</view>
+</view>

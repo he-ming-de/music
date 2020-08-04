@@ -1,0 +1,68 @@
+<!--pages/dj/dj.wxml-->
+<view class="item">
+	<swiper indicator-dots="{{true}}" indicator-active-color="#ff4d00" autoplay="{{true}}" circular="{{true}}">
+		<swiper-item wx:for="{{data}}" wx:key="index">
+
+			<view class="lunbod">
+				<view class="lunbos">
+					<image src="{{item.pic}}" class="lunbo"></image>
+					<view class="font">{{item.typeTitle}}</view>
+				</view>
+			</view>
+
+		</swiper-item>
+	</swiper>
+	<view class="iis">
+		<view>
+			<view class="images">
+				<image src="../../images/tabbar/fl.png" class="image"></image>
+			</view>
+			<view class="fongs">电台分类</view>
+		</view>
+		<view>
+			<view class="images">
+				<image src="../../images/tabbar/ph.png" class="image"></image>
+			</view>
+			<view class="fongs">电台排行</view>
+		</view>
+		<view>
+			<view class="images">
+				<image src="../../images/tabbar/hg.png" class="image"></image>
+			</view>
+			<view class="fongs">付费精品</view>
+		</view>
+		<view>
+			<view class="images">
+				<image src="../../images/tabbar/zb.png" class="image"></image>
+			</view>
+			<view class="fongs">主播学院</view>
+		</view>
+	</view>
+	<view class="xxx"></view>
+  <view class="box">热门分类</view>
+	<view class="item1">
+		<view wx:for="{{categories}}" wx:key="index">
+    <view class="xxx"></view>
+			<view class="ims">
+				<view class="imi">
+					<image src="{{item.picUWPUrl}}" class="im"></image>
+				</view>
+				<view>{{item.name}}</view>
+			</view>
+      <view class="xxx"></view>
+		</view>
+	</view>
+  <view class="box">更多分类</view>
+  <view class="item1">
+		<view wx:for="{{categoriesd}}" wx:key="index">
+    <view class="xxx"></view>
+			<view class="ims">
+				<view class="imi">
+					<image src="{{item.picUWPUrl}}" class="im"></image>
+				</view>
+				<view>{{item.name}}</view>
+			</view>
+      <view class="xxx"></view>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,19 @@
+<!--pages/single/single.wxml-->
+<view class="item6">
+	<view class="image">
+		<image src="{{picUrl}}" class="img"></image>
+	</view>
+	<view wx:for="{{hotSongs}}" wx:key="index" class="item" bindtap="bindplay" data-item="{{item}}">
+		<view class="item3">{{index+1}}</view>
+		<view>
+			<view class="item4">{{item.name}}</view>
+			<view class="item1">
+				<view wx:for="{{item.ar}}" wx:key="index">
+					{{item.name}}
+				</view>
+				<view class="item5">·</view>
+				<view>{{item.al.name}}</view>
+			</view>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,8 @@
+<!--components/rotation/rotation.wxml-->
+<view class="box">
+	<swiper class="swiper" indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" duration="{{500}}" circular="{{true}}">
+		<swiper-item wx:for="{{banners}}" wx:key="index" class="swiper-item">
+			<image class="logo" src="{{item.imageUrl}}" mode="widthFix"></image>
+		</swiper-item>
+	</swiper>
+</view>

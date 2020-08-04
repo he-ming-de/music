@@ -1,0 +1,47 @@
+<view class="background" style="background: url({{arr.playlist.creator.backgroundUrl}});">
+	<view class="nav">
+		<image bindtap="rester" src="/images/tabbar/playyou.png" class="img"></image>
+		歌单
+	</view>
+	<view class="navbox">
+		<image src="{{arr.playlist.coverImgUrl}}" class="coverimg"></image>
+		<view>
+			<view>{{arr.playlist.name}}</view>
+			<view class="flex mart">
+				<image src="{{arr.playlist.creator.avatarUrl}}" class="userimg"></image>
+				<view>{{arr.playlist.creator.nickname}}</view>
+			</view>
+		</view>
+	</view>
+	<view class="tbox">
+		<view class="ttetx">
+			<image src="/images/tabbar/pinglun.png" class="icon"></image>
+			<view>{{arr.playlist.commentCount}}</view>
+		</view>
+		<view class="ttetx">
+			<image src="/images/tabbar/fenxiang.png" class="icon"></image>
+			<view>{{arr.playlist.shareCount}}</view>
+		</view>
+		<view class="ttetx">
+			<image src="/images/tabbar/xiazai.png" class="icon"></image>
+			<view>下载</view>
+		</view>
+		<view class="ttetx">
+			<image src="/images/tabbar/duoxuan.png" class="icon"></image>
+			<view>多选</view>
+		</view>
+	</view>
+</view>
+
+<view class="conbox">
+	<view class="flex cnav">
+		<image src="/images/tabbar/bofang (1).png" class="icon2"></image>
+		<view class="flex al-center">播放全部 <view class="tex2">(共{{tracks.length}}首)</view>
+		</view>
+		<view class="conbox1">+ 收藏（{{arr.playlist.subscribedCount}}）</view>
+	</view>
+</view>
+<view wx:for="{{arr.playlist.tracks}}" class="context" wx:key="index" bindtap="bindplay" data-item="{{item}}">
+	<view class="context1">{{index+1}}</view>
+	<view class="context2">{{item.name}}</view>
+</view>

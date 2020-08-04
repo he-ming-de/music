@@ -1,0 +1,50 @@
+/* pages/singer/singer.wxss */
+.hear {
+  display: flex;
+  justify-content: space-between;
+
+}
+.font{
+  font-size: 28rpx;
+  width: 190rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+.fonts{
+  font-size: 24rpx;
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 80rpx;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.change{
+  border-bottom: 2rpx solid red;
+}
+.active {
+  background: red;
+}
+.item {
+  margin-top: 40rpx;
+}
+.item1 {
+  padding: 0 40rpx;
+}
+.image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.imag {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-right: 40rpx;
+}
+.images {
+  display: flex;
+  align-items: center;
+  margin-top: 40rpx;
+}

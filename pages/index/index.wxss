@@ -1,0 +1,190 @@
+/**index.wxss**/
+.font {
+  display: flex;
+  align-items: center;
+  font-size: 40rpx;
+  font-weight: 700;
+  padding: 20rpx 40rpx;
+}
+.imgccc {
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img {
+  width: 50rpx;
+  height: 50rpx;
+}
+.fontcs {
+  width: 140rpx;
+}
+
+.input {
+  text-align: center;
+  background: rgba(0, 0, 0, .1);
+  border-radius: 20rpx;
+  font-size: 32rpx;
+  padding: 6rpx 0;
+}
+
+.inputs {
+  width: 400rpx;
+  margin:0 40rpx;
+}
+
+.imgs {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 30rpx;
+  left: 320rpx;
+}
+
+.im {
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  margin-left: 20rpx;
+}
+.dels {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 46rpx;
+  right: 186rpx;
+  z-index: 99;
+}
+
+.inputh {
+  text-align: center;
+  background: rgba(0, 0, 0, .1);
+  border-radius: 20rpx;
+  font-size: 32rpx;
+  padding: 6rpx 0;
+}
+
+.fonts {
+  display: flex;
+  margin-top: 40rpx;
+  padding: 0 40rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sub {
+  width: 80%;
+}
+
+.imx {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.fonth {
+  display: flex;
+  padding: 20rpx 0;
+  align-items: center;
+  border-top: 1rpx solid #ccc;
+}
+
+.sfont {
+  margin-left: 20rpx;
+}
+
+.fiex {
+  width: 540rpx;
+  left: 40rpx;
+  box-shadow: 0 0 20rpx  #ccc;
+  position: absolute;
+  background: #fff;
+  z-index: 2;
+}
+
+.pi {
+  padding: 20rpx 0;
+  margin-left: 10rpx;
+}
+
+.simg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.simgs {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.ssimg {
+  padding: 0 40rpx;
+  margin-top: 60rpx;
+}
+
+.history {
+  display: flex;
+  margin-top: 20rpx;
+  flex-wrap: wrap;
+}
+
+.historys {
+  background: #ccc;
+  padding: 6rpx 12rpx;
+  border-radius: 20rpx;
+  margin: 20rpx 0 0 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.ismg {
+  padding: 0 40rpx;
+  margin-top: 40rpx;
+}
+
+.iimgs {
+  width: 50rpx;
+  height: 38rpx;
+  margin-left: 20rpx;
+}
+
+.iimg {
+  width: 60rpx;
+  height: 38rpx;
+}
+
+.ifont {
+  display: flex;
+  margin-bottom: 10rpx;
+}
+
+.iiss {
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.iiis {
+  margin-right: 20rpx;
+  color: red;
+}
+
+.iiisa {
+  margin-right: 20rpx;
+}
+
+.fontz {
+  font-size: 36rpx;
+  font-weight: 700;
+}
+.fontzs {
+  font-size: 36rpx;
+}
+
+.fontx {
+  color: #ccc;
+}
+.iiid {
+  margin-left: 10rpx;
+}

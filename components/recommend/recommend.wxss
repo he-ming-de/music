@@ -1,0 +1,18 @@
+/* components/recommend/recommend.wxss */
+.img {
+  width: 70rpx;
+  height: 70rpx;
+}
+.font {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 140rpx;
+}
+.item {
+  display: flex;
+  padding: 20rpx 40rpx;
+}
+.fonts {
+  margin-bottom: 20rpx;
+}

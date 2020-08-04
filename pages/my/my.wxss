@@ -1,0 +1,111 @@
+/* pages/my/my.wxss */
+.buts {
+  margin-top: 60rpx;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 160rpx;
+}
+
+.img {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.item1 {
+  display: flex;
+  align-items: center;
+}
+
+.imgs {
+  width: 120rpx;
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.font {
+  background: #ccc;
+  border-radius: 20rpx;
+  color: rgb(255, 255, 255);
+  width: 110rpx;
+  display: flex;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+
+.fonts {
+  margin-left: 20rpx;
+}
+
+.fontc {
+  color: rgb(255, 255, 255);
+  font-size: 36rpx;
+}
+
+.top {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  margin: 0px;
+  background-size: 100% 100%;
+  z-index: -1;
+}
+.item3 {
+  color: #fff;
+  background: #ccc;
+  border-radius: 20rpx;
+  padding: 6rpx 12rpx;
+}
+.item4 {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40rpx;
+  margin-top: 40rpx;
+  align-items: center;
+}
+.item5 {
+  padding: 0 40rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80rpx;
+  color: #fff;
+}
+.fontss {
+  margin-top: 10rpx;
+}
+.image {
+  width: 30rpx;
+  height: 30rpx;
+}
+.images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.boutoom {
+  width: 220rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background: rgb(246,186,64);
+  color: white;
+  border-radius: 10rpx;
+}
+.simbut {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80rpx;
+}
+

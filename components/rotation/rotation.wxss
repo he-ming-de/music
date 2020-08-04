@@ -1,0 +1,13 @@
+/* components/rotation/rotation.wxss */
+.logo {
+  height: 280rpx ! important;
+  width: 95%;
+  border-radius: 20rpx;
+}
+.swiper,swiper-item {
+  height: 280rpx ! important;
+}
+.box {
+  text-align: center;
+  padding: 20rpx;
+}

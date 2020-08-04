@@ -1,0 +1,16 @@
+/* pages/edit/edit.wxss */
+.boutoom {
+  width: 220rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background: rgb(246,186,64);
+  color: white;
+  border-radius: 10rpx;
+}
+.simbut {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80rpx;
+}
